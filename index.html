@@ -19,23 +19,26 @@
         }
 
     </style>
+
+    <!-- This is the start of the HTML body section. Everything you see displayed on the website is written here. -->
     <body>
-        <!-- This is the start of the HTML body section. Everything you see displayed on the website is written here. -->
         <div class="box">
             <div style="text-align: center;">
-                <p>Enter the correct password to win</p>
+                <p>Enter the correct password</p>
 
                 <form action="">
                     <input type="password" id="pass" autocomplete="off" required>
                     <br />
                     <input onclick="verify()" type="submit" value="verify">
                 </form>
-
+    
+                <br />
+                <br />
+                <br />
                 <p id="hint" style="color: white; text-align: center;" onmouseover="show()" onmouseleave="hide()">Hint: Ctrl+Shift+I</p>
-                
             </div>
         </div>
-            
+        
         <!-- This is the start of the JavaScript code -->
         <!-- Hmmm, maybe there's something useful here? -->
         <script>
