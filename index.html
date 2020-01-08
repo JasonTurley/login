@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head lang="en-us">
-    <title>Super Secure Login Page</title>
-</head>
-<body>
-    <!-- This is a comment. Comments contain notes, explanations, and even secrets... -->
-    <div style="position: relative; padding: 5px; top: 50px; left: 38%; width: 350px; height: 140px;">
-        <div style="text-align: center;">
-            <p>Enter the correct password to win</p>
+    <head lang="en-us">
+        <title>Super Secure Login Page</title>
+    </head>
 
-            <form action="login.html">
-                <input type="password" id="pass">
-                <br />
-                <input onclick="verify()" type="submit" value="verify" required>
-            </form>
+    <!-- This is CSS, a scripting language that is used to control the style of a web document in a simple and easy way. 
+        It can align text, change background the background color of a website, and so much more!
+         https://www.tutorialspoint.com/css/index.htm -->
+    <style>
+        .box {
+            position: relative;
+            padding: 5px;
+            top: 50px;
+            left: 38%;
+            width: 350px;
+            height: 140px;
+            border-style: dotted;
+        }
 
-            <p id="hint" style="color: white;" onmouseover="show()" onmouseleave="hide()">Hint: Ctrl+Shift+I</p>
+    </style>
+    <body>
+        <!-- This is the start of the HTML body section. Everything you see displayed on the website is written here. -->
+        <div class="box">
+            <div style="text-align: center;">
+                <p>Enter the correct password to win</p>
 
+                <form action="">
+                    <input type="password" id="pass" autocomplete="off" required>
+                    <br />
+                    <input onclick="verify()" type="submit" value="verify">
+                </form>
+
+                <p id="hint" style="color: white; text-align: center;" onmouseover="show()" onmouseleave="hide()">Hint: Ctrl+Shift+I</p>
+                
+            </div>
         </div>
-    </div>
+            
+        <!-- This is the start of the JavaScript code -->
+        <!-- Hmmm, maybe there's something useful here? -->
+        <script>
+            var password = document.getElementById('pass');
+            var hint = document.getElementById('hint');
 
-    <script>
-        /* This is what JavaScript code looks like */
-
-        var password = document.getElementById('pass');
-        var hint = document.getElementById('hint');
-
-        function verify() {
-            /* FIXME: Do not leave the password in the source code! */
-            if (password.value == 'ChicagoBasketballRules!') {
-                alert('That is the correct password!');
-            } else {
-                alert('Incorrect, try again.');
+            function verify() {
+                /* FIXME: Do not leave the password in the source code! */
+                if (password.value == 'ChicagoBasketballRules!') {
+                    alert('That is the correct password!');
+                } else {
+                    alert('Incorrect, try again.');
+                }
             }
-        }
 
-        function show() {
-            hint.style.color = "black";
-        }
+            function show() {
+                hint.style.color = "black";
+            }
 
-        function hide() {
-            hint.style.color = "white";
-        }
+            function hide() {
+                hint.style.color = "white";
+            }
 
-    </script>
-</body>
+        </script>
+    </body>
 </html>
