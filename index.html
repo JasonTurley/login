@@ -8,6 +8,13 @@
         It can align text, change background the background color of a website, and so much more!
          https://www.tutorialspoint.com/css/index.htm -->
     <style>
+        body {
+            background-color: cornflowerblue;
+            font-size: 20px;
+            font-family: serif, Cambria;
+            color: purple;
+        }
+
         .box {
             position: relative;
             padding: 5px;
@@ -15,7 +22,8 @@
             left: 38%;
             width: 350px;
             height: 140px;
-            border-style: dotted;
+            border-style:double ;
+            border-color: purple;
         }
 
     </style>
@@ -35,7 +43,7 @@
                 <br />
                 <br />
                 <br />
-                <p id="hint" style="color: white; text-align: center;" onmouseover="show()" onmouseleave="hide()">Hint: Ctrl+Shift+I</p>
+                <p id="hint" style="color: cornflowerblue; text-align: center;" onmouseover="show()" onmouseleave="hide()">Hint: Ctrl+Shift+I</p>
             </div>
         </div>
         
@@ -54,11 +62,11 @@
             }
 
             function show() {
-                hint.style.color = "black";
+                hint.style.color = "white";
             }
 
             function hide() {
-                hint.style.color = "white";
+                hint.style.color = "cornflowerblue";
             }
 
         </script>
